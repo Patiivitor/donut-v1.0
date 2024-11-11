@@ -97,3 +97,9 @@ footer a:hover {
   border: none;
   color: #f8f9fa !important;
 }
+
+#about-visit {
+  background-color: #f47193;
+  color: #ffffff;
+  text-align: center;
+}
