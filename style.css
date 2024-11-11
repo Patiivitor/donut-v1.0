@@ -62,7 +62,7 @@ footer a:hover {
 .cart-badge {
   position: absolute;
   margin-left: 5px;
-  background: red;
+  background: #f47193;
   color: white;
   border-radius: 50%;
   padding: 4px 8px;
