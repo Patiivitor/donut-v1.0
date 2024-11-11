@@ -91,3 +91,9 @@ footer a:hover {
   color: #f47193;
   text-decoration: underline;
 }
+
+.btn {
+  background-color: #f47193 !important;
+  border: none;
+  color: #f8f9fa !important;
+}
