@@ -61,7 +61,6 @@ footer a:hover {
 
 .cart-badge {
   position: absolute;
-  margin-left: 5px;
   background: #f47193;
   color: white;
   border-radius: 50%;
@@ -98,8 +97,6 @@ footer a:hover {
   color: #f8f9fa !important;
 }
 
-#about-visit {
-  background-color: #f47193;
-  color: #ffffff;
-  text-align: center;
+.nav-link:hover {
+  color: #f47193 !important;
 }
