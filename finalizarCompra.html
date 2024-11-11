@@ -66,7 +66,7 @@
         </ul>
         <div class="total d-flex justify-content-between">
           <strong>Total</strong>
-          <span id="total-price">R$ 0,00</span>
+          <span id="cart-value">R$ 0,00</span>
         </div>
         <button class="btn btn-success mt-3 w-100" onclick="finalizarCompra()">
           Finalizar Compra
@@ -156,5 +156,48 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Variáveis de carrinho
+      let cartTotal = parseFloat(localStorage.getItem("cartTotal")) || 0;
+      let itemCount = parseInt(localStorage.getItem("itemCount")) || 0;
+
+      // Exibir valores salvos ao carregar a página
+      document.getElementById("cart-total").textContent = itemCount;
+      document.getElementById(
+        "cart-value"
+      ).textContent = `R$ ${cartTotal.toFixed(2)}`;
+
+      // Função para adicionar ao carrinho
+      function addToCart(price) {
+        if (!isNaN(price)) {
+          // Verifica se o preço é um número válido
+          cartTotal += price;
+          itemCount++;
+
+          // Atualiza os elementos na página
+          document.getElementById("cart-total").textContent = itemCount;
+          document.getElementById(
+            "cart-value"
+          ).textContent = `R$ ${cartTotal.toFixed(2)}`;
+
+          // Salva no localStorage
+          localStorage.setItem("cartTotal", cartTotal);
+          localStorage.setItem("itemCount", itemCount);
+        } else {
+          console.error("Preço inválido detectado:", price);
+        }
+      }
+
+      // Evento para cada botão de "Adicionar ao Carrinho"
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", function () {
+          const price = parseFloat(
+            this.previousElementSibling.getAttribute("data-price")
+          );
+          addToCart(price);
+          alert("Produto adicionado ao carrinho!");
+        });
+      });
+    </script>
   </body>
 </html>
