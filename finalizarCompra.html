@@ -68,7 +68,11 @@
           <strong>Total</strong>
           <span id="cart-value">R$ 0,00</span>
         </div>
-        <button class="btn btn-success mt-3 w-100" onclick="finalizarCompra()">
+        <button
+          id="finalizar"
+          class="btn btn-success mt-3 w-100"
+          onclick="finalizarCompra()"
+        >
           Finalizar Compra
         </button>
       </div>
@@ -198,6 +202,15 @@
           alert("Produto adicionado ao carrinho!");
         });
       });
+    </script>
+
+    <script>
+      document
+        .getElementById("finalizar")
+        .addEventListener("click", function () {
+          localStorage.clear();
+          location.reload();
+        });
     </script>
   </body>
 </html>
