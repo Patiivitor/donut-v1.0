@@ -1,0 +1,93 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.logo {
+  max-height: 90px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.sobre-nos {
+  background-color: #f8f9fa;
+}
+
+.sobre-nos img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.produtos-destaque .card {
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.produtos-destaque .card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #343a40;
+}
+
+footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.carousel-item {
+  height: 60vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.cart-badge {
+  position: absolute;
+  margin-left: 5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #f47193;
+  text-decoration: underline;
+}
